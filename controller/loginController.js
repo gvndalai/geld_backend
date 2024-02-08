@@ -1,3 +1,7 @@
+const sql = require("../db");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const secretKey = process.env.SECRET_KEY;
 const postLogin = async (req, res) => {
   const { email, password } = req.body;
 

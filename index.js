@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const helmet = require("helmet");
+// const helmet = require("helmet");
 const dotenv = require("dotenv");
 // const morgan = require("morgan");
 const { verifyToken } = require("./middleware/auth");
@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 8080;
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use(helmet());
+// app.use(helmet());
 // app.use(morgan("dev")); // Logging middleware
 
 // Routes
