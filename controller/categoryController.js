@@ -16,7 +16,7 @@ const postCategory = async (req, res) => {
     }
     const categoryData = await sql`
         INSERT INTO category(category_image, name, description, createdAt, updatedAt,userid)
-        VALUES (${icon}, ${category}, 'Category description', NOW(), NOW(),${userid} )
+        VALUES (${icon}, ${category}, 'Category description', NOW(), NOW(),${userid})
       `;
     res.status(201).send({ message: "Successfully created" });
   } catch (error) {

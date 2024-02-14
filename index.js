@@ -42,7 +42,6 @@ app.get("/dashboard", verifyToken, async (req, res) => {
   const { email, id } = req.user;
   res.json({ message: `Welcome, ${email}, ${id}` });
 });
-
 app.post("/login", postLogin);
 app.get("/category", getCategory);
 app.post("/category", postCategory);
